@@ -1,0 +1,33 @@
+LITERALLY YMME STUDIO — PWA + panel de sincronización
+
+INSTALACIÓN
+1. Sube TODOS los archivos de este paquete a un repositorio GitHub.
+2. GitHub > Settings > Pages > Deploy from a branch > main > /(root) > Save.
+3. Abre la URL HTTPS que genera GitHub Pages.
+4. iPhone: Safari > Compartir > Añadir a pantalla de inicio.
+5. Android: Chrome > menú ⋮ > Instalar aplicación / Añadir a pantalla de inicio.
+
+ARCHIVOS
+- literallyymme-studio.html: aplicación.
+- manifest.webmanifest: datos de instalación.
+- service-worker.js: caché/offline básico.
+- icons/: iconos de la app.
+
+SINCRONIZACIÓN TIKTOK
+El panel permite configurar la URL de un backend que devuelva JSON:
+{
+  "followers": 123,
+  "likes": 1521,
+  "video_count": 2,
+  "views": 0,
+  "comments": 0
+}
+Los campos followers y likes son obligatorios. views y comments son opcionales.
+El panel consulta esa URL con la frecuencia elegida (mínimo 1 minuto).
+
+IMPORTANTE: el HTML NO obtiene estadísticas de TikTok por sí solo. La URL anterior debe ser un backend real que use una integración autorizada, o un proveedor externo legítimo. No introduzcas tokens ni contraseñas en este HTML. No hay un feed oficial que notifique cada like/follow al instante; la consulta periódica actualiza según la frecuencia y disponibilidad del proveedor.
+
+TikTok Display API / User Info requiere que la persona propietaria autorice la aplicación y que se concedan los permisos pertinentes, incluido user.info.stats para follower_count y likes_count. TikTok Research API permite consultar información pública por username, pero está limitada a investigadores autorizados y no es una API pública general para cualquier proyecto.
+
+DATOS LOCALES
+Los datos se guardan en LocalStorage del navegador y no se sincronizan entre dispositivos. Para compartir datos entre móviles hace falta backend y base de datos propios.

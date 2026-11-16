@@ -1,0 +1,21 @@
+# literallyymme studio
+
+Aplicación local para organizar contenido de TikTok y futuras colaboraciones.
+
+## Cómo abrirla
+1. Descarga `literallyymme-studio.html`.
+2. Haz doble clic en el archivo o ábrelo desde Chrome, Edge o Firefox.
+3. No necesita instalación ni servidor.
+
+## Apartados
+- Inicio: resumen y accesos rápidos.
+- Planner: calendario, vídeos, estados y notas.
+- Crecimiento: registro manual de seguidores, likes, visualizaciones y comentarios, con gráfica.
+- Ideas: generador de ideas y banco de ideas guardadas.
+- Marcas: seguimiento de marcas y colaboraciones.
+
+## Datos y privacidad
+Los datos se guardan en LocalStorage del navegador en el dispositivo donde se use la aplicación. No se sincronizan automáticamente entre dispositivos ni se envían a ningún servidor. Si se borran los datos del navegador, podrían perderse. Para conservarlos, mantén copias del navegador o exporta una copia del perfil mediante las herramientas del navegador.
+
+## Importante
+La aplicación no se conecta a TikTok ni obtiene estadísticas automáticamente. Las cifras deben introducirse manualmente desde las estadísticas de la cuenta.
